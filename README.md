@@ -8,7 +8,7 @@ Write sentences in first order logic in the most intuitive way:
 ∀('p)('smokes('p) & !'drinks('p) → 'cancer('p))
 ```
 ### Inference Made Easy
-Creating a knowledge on which various kinds of queries can be performed:
+Creating a knowledge base on which various kinds of queries can be performed:
 ```scala
 val kb = Set[Sentence](
   ∀('p)('smokes('p) implies 'cancer('p)),
