@@ -5,7 +5,7 @@
 ### Sentences Made Natural
 Write sentences in first order logic in the most intuitive way:
 
-	'smokes('p) & !'drinks('p) → 'cancer('p)
+	∀('p)('smokes('p) & !'drinks('p) → 'cancer('p))
 
 
 ### Inference Made Easy
