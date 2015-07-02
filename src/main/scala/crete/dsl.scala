@@ -9,4 +9,10 @@ object dsl {
 
   implicit def symbolIsParameterlessPredicate(s: Symbol): ParameterlessPredicate = ParameterlessPredicate(s)
 
+  implicit def stringIsConst(s: String): Const = Const(s)
+
+  implicit class SentenceSetIsKnowledgeBase(val s: Set[Sentence]) extends AnyVal {
+    def entails(sentence: Sentence): Boolean = ???
+  }
+
 }
