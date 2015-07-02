@@ -26,3 +26,7 @@ The default algorithm used for entailment inference is [refutation resolution](h
 
     TODO
    
+
+## See Also
+* **CreteSoft**: a probabilistic soft logic framwork built upon **Crete**.
+* **CreteMarkov**: a Markov logic network framework built upon **Crete**.
