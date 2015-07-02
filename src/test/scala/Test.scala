@@ -21,9 +21,7 @@ object Test {
 
     //val ex =
 
-    val sentence = 'smokes('p) && ~'drinks('p) || 'hasFun('p) && ~'jumps('p) implies 'cancer('p)
-
-
+    val sentence = 'smokes('p) && !'drinks('p) || 'hasFun('p) && !'jumps('p) implies 'cancer('p)
 
     val bp = 0
 

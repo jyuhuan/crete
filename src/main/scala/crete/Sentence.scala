@@ -8,7 +8,7 @@ sealed trait Sentence {
   def ||(that: Sentence) = BinaryCompoundSentence(this, "∨", that)
   def implies(that: Sentence) = BinaryCompoundSentence(this, "→", that)
   def iff(that: Sentence) = BinaryCompoundSentence(this, "↔", that)
-  def unary_~ = UnaryCompoundSentence("~", this)
+  def unary_! = UnaryCompoundSentence("~", this)
 }
 
 case class BinaryCompoundSentence(left: Sentence, op: String, right: Sentence) extends Sentence
