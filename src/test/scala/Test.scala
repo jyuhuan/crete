@@ -10,14 +10,16 @@ object Test {
 
   def main(args: Array[String]) {
     val kb = Set[Sentence](
-      'smokes('p) implies 'cancer('p),
-      'cancer('x) implies 'die('p),
-      'cancer('x) implies 'die('p),
-      'cancer('x) implies 'die('p),
-      'cancer('x) implies 'die('p),
-      'smokes("john")
+      ∀('p)('smokes('p) implies 'cancer('p)),
+      ∀('p)('cancer('x) implies 'dies('p)),
+      'smokes("john"),
+      'smokes("mary")
     )
-    val query = kb entails 'die("john")
+
+    val query1 = kb entails 'dies("john")
+    val query2 = kb existentialQuery(∃('x)('smokes('x)))
+
+    //val ex =
 
     val sentence = 'smokes('p) && ~'drinks('p) || 'hasFun('p) && ~'jumps('p) implies 'cancer('p)
 

@@ -13,6 +13,13 @@ object dsl {
 
   implicit class SentenceSetIsKnowledgeBase(val s: Set[Sentence]) extends AnyVal {
     def entails(sentence: Sentence): Boolean = ???
+    def existentialQuery(sentence: ExistentiallyQuantifiedSentence): Seq[Const] = ???
   }
+
+  def ∃(theQuantified: Var*)(sentence: Sentence): ExistentiallyQuantifiedSentence =
+    new ExistentiallyQuantifiedSentence(theQuantified, sentence)
+
+  def ∀(theQuantified: Var*)(sentence: Sentence): UniversallyQuantifiedSentence =
+    new UniversallyQuantifiedSentence(theQuantified, sentence)
 
 }

@@ -13,7 +13,8 @@ sealed trait Sentence {
 
 case class BinaryCompoundSentence(left: Sentence, op: String, right: Sentence) extends Sentence
 case class UnaryCompoundSentence(op: String, operand: Sentence) extends Sentence
-case class QuantifiedSentence(quantifier: String, variables: Seq[Var], sentence: Sentence) extends Sentence
+case class ExistentiallyQuantifiedSentence(theQuantified: Seq[Var], sentence: Sentence) extends Sentence
+case class UniversallyQuantifiedSentence(theQuantified: Seq[Var], sentence: Sentence) extends Sentence
 
 
 case class ParameterlessPredicate(name: Symbol) {
