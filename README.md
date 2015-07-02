@@ -1,5 +1,5 @@
 # Crete
-**Crete** is a DSL in the Scala programming language. With Crete, you can write first-order logic sentences naturally as you would write them in any textbook. 
+**Crete** is a DSL in the Scala programming language for logic inference. With Crete, you can write first-order logic sentences naturally, as you would write them by hand. 
 
 ## Features
 ### Sentences Made Natural
