@@ -17,7 +17,8 @@ object Test {
     )
 
     val query1 = kb entails 'dies("john")
-    val query2 = kb existentialQuery ∃('x)('smokes('x))
+    val query2 = 'dies("john") follows kb
+    val query3 = kb existentialQuery ∃('x)('smokes('x))
 
     //val ex =
 

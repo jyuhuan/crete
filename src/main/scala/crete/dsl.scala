@@ -16,6 +16,10 @@ object dsl {
     def existentialQuery(sentence: ExistentiallyQuantifiedSentence): Seq[Const] = ???
   }
 
+  implicit class PredicateCanFollowKnowledgeBase(val p: Predicate) extends AnyVal {
+    def follows(kb: Set[Sentence]): Boolean = ???
+  }
+
   def ∃(theQuantified: Var*)(sentence: Sentence): ExistentiallyQuantifiedSentence =
     new ExistentiallyQuantifiedSentence(theQuantified, sentence)
 
